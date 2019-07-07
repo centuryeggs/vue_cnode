@@ -1,12 +1,14 @@
 <template>
   <div class="Header">
     <div class="container">
-      <a class="logo" href="/">
-        <img src="../assets/cnodejs_light.svg" alt="首页" />
-      </a>
+      <router-link :to="{name:'main'}">
+        <img class="logo" src="../assets/cnodejs_light.svg" />
+      </router-link>
       <ul class="nav">
         <li>
-          <a href="/">首页</a>
+          <router-link :to="{name:'main'}">
+            <a href="/">首页</a>
+          </router-link>
         </li>
         <li>
           <el-button type="text" @click="showAbout = true">关于</el-button>
@@ -15,8 +17,14 @@
     </div>
     <el-dialog title="关于" :visible.sync="showAbout" width="30%" center>
       <div class="about">
-        <p>作者：<a href="https://github.com/BrendanFich" target="_blank">陈俊坚</a></p>
-        <p>源码：<a href="" target="_blank">VueCnode</a></p>
+        <p>
+          作者：
+          <a href="https://github.com/BrendanFich" target="_blank">陈俊坚</a>
+        </p>
+        <p>
+          源码：
+          <a href target="_blank">VueCnode</a>
+        </p>
         <p>技术栈：Vue,Vue Router,ElementUI,Axios</p>
       </div>
       <span slot="footer" class="dialog-footer">
@@ -32,9 +40,9 @@ export default {
   data() {
     return {
       showAbout: false
-    }
+    };
   }
-}
+};
 </script>
   
 <style scoped>
@@ -44,7 +52,7 @@ export default {
   margin-bottom: 10px;
 }
 
-.logo {
+.Header .logo {
   min-width: 120px;
   padding: 6px;
   vertical-align: center;
@@ -69,7 +77,7 @@ export default {
   line-height: 2em;
 }
 .about a {
-    color: #80bd01;
+  color: #80bd01;
 }
 </style>
 <style>
