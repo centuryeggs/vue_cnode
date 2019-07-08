@@ -23,7 +23,7 @@
         </p>
         <p>
           源码：
-          <a href target="_blank">VueCnode</a>
+          <a href="https://github.com/BrendanFich/vue_cnode" target="_blank">VueCnode</a>
         </p>
         <p>技术栈：Vue,Vue Router,ElementUI,Axios</p>
       </div>
