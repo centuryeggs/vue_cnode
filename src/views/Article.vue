@@ -44,7 +44,7 @@
               </span>
               <span class="put_good" v-if="post.author.loginname == reply.author.loginname">作者</span>
             </div>
-            <div v-html="reply.content"></div>
+            <div v-html="reply.content" @click="changeHref"></div>
           </div>
         </dir>
       </div>
@@ -81,6 +81,16 @@ export default {
         .catch(error => {
           console.log(error)
         });
+    },
+    //因为使用了hash模式，url存在#，而返回数据中a链接的href中缺少#
+    //故给回复中@用户名的其href增加#，实现点击跳转至User页面
+    changeHref(event){
+      let start = event.target.innerText.indexOf('@')
+      let nameArr = event.target.innerText.split('')
+      nameArr.shift()
+      if(start == 0){
+        event.target.setAttribute("href","/#/user/"+ nameArr.join('')); 
+      }
     }
   }
 };

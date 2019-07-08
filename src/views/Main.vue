@@ -10,7 +10,6 @@
         <el-tab-pane label="招聘" name="job"></el-tab-pane>
         <post-list :tab="activeName"></post-list>
       </el-tabs>
-      <Pagination></Pagination>
     </div>
     
   </div>
