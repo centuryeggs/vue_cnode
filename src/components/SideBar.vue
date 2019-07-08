@@ -105,7 +105,6 @@ export default {
             this.userinfo.recent_topics.splice(5);
             this.userinfo.recent_replies.splice(5);
           }
-          console.log(this.userinfo);
           this.isloaded = true;
         })
         .catch(err => {

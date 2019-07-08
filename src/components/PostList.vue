@@ -64,9 +64,7 @@ export default {
           }
         })
         .then(res => {
-          this.posts = res.data.data;
-          console.log(this.posts);
-          
+          this.posts = res.data.data
           this.isLoading = false
         })
         .catch(err => {

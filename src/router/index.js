@@ -10,6 +10,7 @@ export default new Router({
   scrollBehavior: () => {
     return { x: 0, y: 0 }
   },
+  mode: 'history',
   routes: [
     {
       name: 'main',
@@ -20,7 +21,7 @@ export default new Router({
     },
     {
       name: 'user',
-      path: '/user/:loginname ',
+      path: '/user/:loginname',
       components: {
         main: User
       }
