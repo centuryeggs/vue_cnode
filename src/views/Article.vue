@@ -89,7 +89,7 @@ export default {
       let nameArr = event.target.innerText.split('')
       nameArr.shift()
       if(start == 0){
-        event.target.setAttribute("href","/#/user/"+ nameArr.join('')); 
+        event.target.setAttribute("href","/vue_cnode/#/user/"+ nameArr.join('')); 
       }
     }
   }
